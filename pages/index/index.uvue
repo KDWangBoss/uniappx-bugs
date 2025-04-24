@@ -1,0 +1,13 @@
+<template>
+	<view>
+		<Skeleton></Skeleton>
+	</view>
+</template>
+
+<script setup lang="uts">
+	import Skeleton from './_components/Skeleton.uvue'
+</script>
+
+<style lang="scss">
+	
+</style>

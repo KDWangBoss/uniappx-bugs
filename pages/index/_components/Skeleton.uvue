@@ -1,0 +1,94 @@
+<template>
+	<view class="container">
+		<view v-for="i in 6" :key="i" class="container-item">
+			<!-- 第一行 -->
+			<view class="first-row">
+				<view class="first-row-item0 Skeleton"></view>
+				<view class="first-row-item1 Skeleton"></view>
+			</view>
+			<!-- 第二行 -->
+			<view class="first-row second-row">
+				<view class="first-row-item0 Skeleton"></view>
+				<view class="first-row-item1 Skeleton"></view>
+			</view>
+			<!-- 第三行 -->
+			<view class="first-row third-row">
+				<view class="first-row-item0 Skeleton"></view>
+				<view class="first-row-item1"></view>
+			</view>
+		</view>
+	</view>
+</template>
+
+<script lang="uts">
+	
+</script>
+
+<style lang="scss">
+	.container {
+		display: flex;
+		flex-direction: column;
+		row-gap: 16rpx;
+		background: #F5F5F5;
+		padding: 32rpx;
+		
+		.container-item {
+			display: flex;
+			flex-direction: column;
+			padding: 24rpx ;
+			background: #FFFFFF;
+			border-radius: 16rpx;
+			
+			.first-row {
+				display: flex;
+				flex-direction: row;
+				
+				.first-row-item0 {
+					flex: 1;
+					background: #EFF2F7;
+					height: 32rpx;
+				}
+				
+				.first-row-item1 {
+					width: 160rpx;
+					height: 32rpx;
+					margin-left: 106rpx;
+					background: #EFF2F7;
+				}
+			}
+			
+			.second-row {
+				margin-top: 8rpx;
+			}
+			
+			.third-row {
+				margin-top: 40rpx;
+				
+				.first-row-item1 {
+					background: #FFFFFF;
+				}
+			}
+		}
+	}
+	
+	.Skeleton {
+		animation-duration: 1.5s;
+		animation-name: blink;
+		animation-timing-function: ease-in-out;
+		animation-iteration-count: infinite;
+	}
+
+	@keyframes blink {
+		0% {
+			opacity: 1;
+		}
+
+		50% {
+			opacity: 0.4;
+		}
+
+		100% {
+			opacity: 1;
+		}
+	}
+</style>
